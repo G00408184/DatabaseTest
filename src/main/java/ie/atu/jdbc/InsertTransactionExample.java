@@ -14,14 +14,14 @@ public class InsertTransactionExample {
 
                 // Insert a new record into the "users" table
                 PreparedStatement stmt = conn.prepareStatement("INSERT INTO users (username, password) VALUES (?, ?)");
-                stmt.setString(1, "john");
-                stmt.setString(2, "password");
+                stmt.setString(1, "Paul");
+                stmt.setString(2, "qwerty");
                 stmt.executeUpdate();
 
                 // Insert a new record into the "emails" table, referencing the new user
                 stmt = conn.prepareStatement("INSERT INTO emails (user_id, email) VALUES (?, ?)");
                 stmt.setInt(1, getLastInsertId(conn));
-                stmt.setString(2, "john@example.com");
+                stmt.setString(2, "paul@atu.com");
                 stmt.executeUpdate();
 
                 // Commit the transaction
