@@ -12,7 +12,7 @@ public class TestConnection {
             Class.forName("com.mysql.cj.jdbc.Driver");
             // Create a connection to the database
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/exampledatabase", "root", "password");
-            System.out.println("Connection made");
+            System.out.println("Connection made to connection pool");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         } finally
