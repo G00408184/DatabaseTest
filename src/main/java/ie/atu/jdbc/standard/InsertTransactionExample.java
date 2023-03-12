@@ -1,4 +1,4 @@
-package ie.atu.jdbc;
+package ie.atu.jdbc.standard;
 import java.sql.*;
 
 public class InsertTransactionExample {
