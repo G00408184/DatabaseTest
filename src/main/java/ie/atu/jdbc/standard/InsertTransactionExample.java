@@ -18,6 +18,16 @@ public class InsertTransactionExample {
                 stmt.setString(2, "qwerty");
                 stmt.executeUpdate();
 
+                // Retrieve the generated key for the new record
+                // This is another way of retrieving a generated key from a table
+                /* ResultSet rs = stmt.getGeneratedKeys();
+                if (rs.next()) {
+                    int lastInsertId = rs.getInt(1);
+                    System.out.println("Last inserted ID: " + lastInsertId);
+                }
+
+                 */
+
                 // Insert a new record into the "emails" table, referencing the new user
                 stmt = conn.prepareStatement("INSERT INTO emails (user_id, email) VALUES (?, ?)");
                 stmt.setInt(1, getLastInsertId(conn));
