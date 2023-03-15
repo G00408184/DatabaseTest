@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class UpdateExample {
     public static void main(String[] args) {
-        String updateSQL = "UPDATE users SET password = 'newpassword' WHERE username = 'johndoe'";
+        String updateSQL = "UPDATE users SET password = 'newpassword' WHERE username = 'Des'";
 
         try (Connection connection = DatabaseUtils.getConnection();
              Statement statement = connection.createStatement()) {
